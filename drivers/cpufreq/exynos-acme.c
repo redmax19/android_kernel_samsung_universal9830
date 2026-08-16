@@ -1484,8 +1484,8 @@ static __init void init_slack_timer(struct exynos_cpufreq_domain *domain,
 	}
 }
 
-/*Underclocking little cores to 182 MHz*/
-unsigned long arg_cpu_min_c1 __ro_after_init = 182000; 
+/*Underclocking little cores to 382 MHz*/
+unsigned long arg_cpu_min_c1 __ro_after_init = 382000; 
 
 static int __init cpufreq_read_cpu_min_c1(char *cpu_min_c1) /*integer remains in memory after function call*/
 {
@@ -1502,8 +1502,8 @@ static int __init cpufreq_read_cpu_min_c1(char *cpu_min_c1) /*integer remains in
 }
 __setup("cpu_min_c1=", cpufreq_read_cpu_min_c1);
 
-/*Underclocking perf cores to 377 MHz*/
-unsigned long arg_cpu_min_c2 __ro_after_init = 377000; 
+/*Underclocking perf cores to 477 MHz*/
+unsigned long arg_cpu_min_c2 __ro_after_init = 477000; 
 
 static __init int cpufreq_read_cpu_min_c2(char *cpu_min_c2)
 {
@@ -1520,8 +1520,8 @@ static __init int cpufreq_read_cpu_min_c2(char *cpu_min_c2)
 }
 __setup("cpu_min_c2=", cpufreq_read_cpu_min_c2);
 
-/*Underclocking prime cores to 546 MHz*/
-unsigned long arg_cpu_min_c3 __ro_after_init = 546000; 
+/*Underclocking prime cores to 646 MHz*/
+unsigned long arg_cpu_min_c3 __ro_after_init = 646000; 
 
 static __init int cpufreq_read_cpu_min_c3(char *cpu_min_c3)
 {
@@ -1572,8 +1572,8 @@ static __init int cpufreq_read_mif_min(char *mif_min)
 }
 __setup("mif_min=", cpufreq_read_mif_min);
 
-/*Overclocking little cores to 1846 MHz*/
-unsigned long arg_cpu_max_c1 __ro_after_init = 1846000; /*max_cpu_freq=x MHz for little cores*/
+/*Overclocking little cores to 1946 MHz*/
+unsigned long arg_cpu_max_c1 __ro_after_init = 1946000; /*max_cpu_freq=x MHz for little cores*/
 
 static int __init cpufreq_read_cpu_max_c1(char *cpu_max_c1) /*integer remains in memory after function call*/
 {
@@ -1590,8 +1590,8 @@ static int __init cpufreq_read_cpu_max_c1(char *cpu_max_c1) /*integer remains in
 }
 __setup("cpu_max_c1=", cpufreq_read_cpu_max_c1);
 
-/*Overclocking perf cores to 2106 MHz*/
-unsigned long arg_cpu_max_c2 __ro_after_init = 2106000; /*max_cpu_freq=x MHz*/
+/*Overclocking perf cores to 2206 MHz*/
+unsigned long arg_cpu_max_c2 __ro_after_init = 2206000; /*max_cpu_freq=x MHz*/
 
 static __init int cpufreq_read_cpu_max_c2(char *cpu_max_c2)
 {
