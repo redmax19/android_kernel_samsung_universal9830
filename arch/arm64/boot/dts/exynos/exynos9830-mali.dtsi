@@ -1,5 +1,5 @@
 /*
- * SAMSUNG EXYNOS9830 MALI device tree sourceA
+ * SAMSUNG EXYNOS9830 MALI device tree source
  *
  * Copyright (c) 2019 Samsung Electronics Co., Ltd.
  *		http://www.samsung.com
@@ -8,7 +8,6 @@
  * it under the terms of the GNU General Public License version 2 as
  * published by the Free Software Foundation.
  */
-
 
 /{
 	/* mali */
@@ -30,7 +29,7 @@
 		/*  8 columns      freq  down   up  stay  mif   little  middle   big  */
 		gpu_dvfs_table = <
 			933000    78  100   5  2730000  1300000       0       0
-	        832000    78   90   5  2730000  1300000       0       0
+			832000    78   90   5  2730000  1300000       0       0
 			800000    78   90   5  2730000  1300000       0       0
 			767000    78   90   5  2730000  1300000       0       0
 			702000    78   90   5  2730000  1300000       0       0
@@ -49,11 +48,11 @@
 		gpu_dvfs_start_clock = <377000>;
 		gpu_dvfs_bl_config_clock = <377000>;
 		gpu_default_voltage = <800000>;
-   	gpu_cold_minimum_vol = <0>;
+		gpu_cold_minimum_vol = <0>;
 		gpu_voltage_offset_margin = <37500>;
 		gpu_tmu_control = <1>;
 		gpu_temp_throttling_level_num = <6>;
-		gpu_temp_throttling = <933000 832000 768000 572000 455000 377000>;
+		gpu_temp_throttling = <933000 832000 767000 572000 455000 377000>;
 		gpu_power_coeff = <625>;
 		gpu_dvfs_time_interval = <5>; /*1 tick : 10ms*/
 		gpu_default_wakeup_lock = <1>;
