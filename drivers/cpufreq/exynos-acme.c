@@ -1608,8 +1608,8 @@ static __init int cpufreq_read_cpu_max_c2(char *cpu_max_c2)
 }
 __setup("cpu_max_c2=", cpufreq_read_cpu_max_c2);
 
-/*Overclocking prime cores to 2522 MHz*/
-unsigned long arg_cpu_max_c3 __ro_after_init = 2522000; /*max_cpu_freq=x MHz*/
+/*Overclocking prime cores to 3100 MHz*/
+unsigned long arg_cpu_max_c3 __ro_after_init = 3100000; /*max_cpu_freq=x MHz*/
 
 static __init int cpufreq_read_cpu_max_c3(char *cpu_max_c3)
 {
