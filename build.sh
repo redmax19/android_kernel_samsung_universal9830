@@ -67,7 +67,7 @@ cd "$SCRIPT_DIR"
 CORES=$(nproc 2>/dev/null || cat /proc/cpuinfo | grep -c processor)
 
 # Define toolchain variables
-CLANG_DIR="$PWD/toolchain/clang_14"
+CLANG_DIR="$PWD/toolchain/clang-r416183b"
 export PATH="$CLANG_DIR/bin:$PATH"
 
 # Check if toolchain exists
