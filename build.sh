@@ -79,8 +79,8 @@ if [ ! -f "$CLANG_DIR/bin/clang" ]; then
     mkdir -p "$CLANG_DIR"
     pushd "$CLANG_DIR" > /dev/null
     curl -LJOk https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/a71fa4c09d7109d611ee63964fc9fca58fee38cd/clang-r450784d.tar.gz
-    tar xf clang-r450784d.tar.gz
-    rm clang-r450784d.tar.gz
+    tar xf linux-x86-a71fa4c09d7109d611ee63964fc9fca58fee38cd-clang-r450784d.tar.gz
+    rm linux-x86-a71fa4c09d7109d611ee63964fc9fca58fee38cd-clang-r450784d.tar.gz
     echo "Cleaning up..."
     popd > /dev/null
 fi
