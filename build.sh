@@ -70,21 +70,6 @@ CORES=$(nproc 2>/dev/null || cat /proc/cpuinfo | grep -c processor)
 CLANG_DIR="$PWD/toolchain/clang-r416183b"
 export PATH="$CLANG_DIR/bin:$PATH"
 
-# Check if toolchain exists
-if [ ! -f "$CLANG_DIR/bin/clang" ]; then
-    echo "-----------------------------------------------"
-    echo "Toolchain not found! Downloading..."
-    echo "-----------------------------------------------"
-    rm -rf "$CLANG_DIR"
-    mkdir -p "$CLANG_DIR"
-    pushd "$CLANG_DIR" > /dev/null
-    curl -LJOk https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/a71fa4c09d7109d611ee63964fc9fca58fee38cd/clang-r450784d.tar.gz
-    tar xf linux-x86-a71fa4c09d7109d611ee63964fc9fca58fee38cd-clang-r450784d.tar.gz
-    rm linux-x86-a71fa4c09d7109d611ee63964fc9fca58fee38cd-clang-r450784d.tar.gz
-    echo "Cleaning up..."
-    popd > /dev/null
-fi
-
 MAKE_ARGS=(
     LLVM=1
     LLVM_IAS=1
