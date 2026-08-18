@@ -36,8 +36,9 @@ jobs:
         run: |
           ./build.sh -m ${{ matrix.target }} -k n -r n
 
-      - name: Upload artifact (${{ matrix.target }})
-        uses: actions/upload-artifact@v4
+      - name: Send Zip to Telegram (${{ matrix.target }})
+        uses: appleboy/telegram-action@master
         with:
-          name: kernel-${{ matrix.target }}
-          path: build/out/${{ matrix.target }}/*.zip
+          to: ${{ secrets.TELEGRAM_TO }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          document: build/out/${{ matrix.target }}/*.zip
