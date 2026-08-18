@@ -71,16 +71,16 @@ CLANG_DIR="$PWD/toolchain/clang_14"
 export PATH="$CLANG_DIR/bin:$PATH"
 
 # Check if toolchain exists
-if [ ! -f "$CLANG_DIR/bin/clang-14" ] && [ ! -f "$CLANG_DIR/bin/clang" ]; then
+if [ ! -f "$CLANG_DIR/bin/clang" ]; then
     echo "-----------------------------------------------"
     echo "Toolchain not found! Downloading..."
     echo "-----------------------------------------------"
     rm -rf "$CLANG_DIR"
     mkdir -p "$CLANG_DIR"
     pushd "$CLANG_DIR" > /dev/null
-    curl -LJOk https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/tags/android-13.0.0_r13/clang-r450784d.tar.gz
-    tar xf android-13.0.0_r13-clang-r450784d.tar.gz
-    rm android-13.0.0_r13-clang-r450784d.tar.gz
+    curl -LJOk https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/a71fa4c09d7109d611ee63964fc9fca58fee38cd/clang-r450784d.tar.gz
+    tar xf clang-r450784d.tar.gz
+    rm clang-r450784d.tar.gz
     echo "Cleaning up..."
     popd > /dev/null
 fi
