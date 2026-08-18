@@ -41,7 +41,7 @@ jobs:
 
       - name: Build kernel (${{ matrix.target }})
         run: |
-          ./build.sh -m ${{ matrix.target }} -k n -r n
+          ./build.sh -m ${{ matrix.target }} -k y -r n
 
       - name: Send Zip to Telegram (${{ matrix.target }})
         uses: appleboy/telegram-action@master
