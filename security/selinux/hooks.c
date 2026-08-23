@@ -117,21 +117,21 @@ static int __init enforcing_setup(char *str)
 	if (!kstrtoul(str, 0, &enforcing)) {
 		selinux_enforcing_boot = enforcing ? 1 : 0;
 	}
-	return 1;
+	return 0;
 }
 __setup("enforcing=", enforcing_setup);
 #else
-#define selinux_enforcing_boot 1
+#define selinux_enforcing_boot 0
 #endif
 
-int selinux_enabled_boot __initdata = 1;
+int selinux_enabled_boot __initdata = 0;
 #ifdef CONFIG_SECURITY_SELINUX_BOOTPARAM
 static int __init selinux_enabled_setup(char *str)
 {
 	unsigned long enabled;
 	if (!kstrtoul(str, 0, &enabled))
 		selinux_enabled_boot = enabled ? 1 : 0;
-	return 1;
+	return 0;
 }
 __setup("selinux=", selinux_enabled_setup);
 #endif
@@ -145,7 +145,7 @@ static int __init checkreqprot_setup(char *str)
 
 	if (!kstrtoul(str, 0, &checkreqprot))
 		selinux_checkreqprot_boot = checkreqprot ? 1 : 0;
-	return 1;
+	return 0;
 }
 __setup("checkreqprot=", checkreqprot_setup);
 
